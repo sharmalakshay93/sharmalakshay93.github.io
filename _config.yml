@@ -25,9 +25,9 @@ author:
   pronouns         :
   bio              : "Applied Scientist / ML Engineer"
   location         : "New York, NY"
-  employer         : "Instacart"
+  employer         :
   uri              :
-  email            : "sharma.lakshay.93@gmail.com"
+  email            : "lakshay.sharma@cims.nyu.edu"
 
   # Academic websites
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=8P7Zxa0AAAAJ"
