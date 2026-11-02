@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Senior Applied Scientist / ML Engineer at [Instacart](https://www.instacart.com/) where I work on computer vision / deep learning methods for in-store mapping and inventory tracking.
+I am a Senior Applied Scientist / ML Engineer at [Instacart](https://www.instacart.com/) where I work on computer vision, vision-language modeling, and deep learning methods for in-store intelligence.
 
 My research interests span computer vision, vision-language models, self-supervised learning, and remote sensing. I have co-authored academic papers published at venues including WACV, ICLR, and ICML workshops, and was named an inventor on a U.S. patent. I serve as a reviewer and program committee member for conferences including NeurIPS and AAAI, as well as numerous workshops.
 
