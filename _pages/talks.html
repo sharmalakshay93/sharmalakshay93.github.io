@@ -28,6 +28,13 @@ author_profile: true
         {% if talk.summary %}
           <p class="publication__summary">{{ talk.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
         {% endif %}
+        {% if talk.links %}
+          <p class="publication__links">
+            {% for l in talk.links %}
+              <a href="{{ l.url }}">{% if l.icon %}<i class="{{ l.icon }} fa-fw" aria-hidden="true"></i>{% endif %}{{ l.label }}</a>
+            {% endfor %}
+          </p>
+        {% endif %}
       </div>
     </li>
   {% endfor %}

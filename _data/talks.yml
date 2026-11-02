@@ -8,6 +8,8 @@
 #   image      optional thumbnail in /images/, shown on the left
 #   image_alt  alt text for the thumbnail
 #   summary    a few sentences; Markdown allowed
+#   links      optional list of extra links shown under the summary, each with
+#              label, url, and an optional Font Awesome icon class
 #
 # Kept here rather than in the _talks/ collection so pushes don't trigger the
 # talk-map GitHub workflow (.github/workflows/scrape_talks.yml).
@@ -29,3 +31,13 @@
     than millions. We close on data efficiency, transfer across datasets, and why targeted
     pretraining is a practical alternative to ever-larger foundation models for niche
     geospatial applications.
+  links:
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=ta40N4KwMvw"
+      icon: "fab fa-youtube"
+    - label: "Apple Podcasts"
+      url: "https://podcasts.apple.com/us/podcast/a-single-gpu-is-all-you-need-for-self-supervised-pretraining/id1668125812?i=1000773083743"
+      icon: "fas fa-podcast"
+    - label: "Spotify"
+      url: "https://open.spotify.com/episode/32IWesthslXpJzUlIxT5Gy"
+      icon: "fab fa-spotify"
