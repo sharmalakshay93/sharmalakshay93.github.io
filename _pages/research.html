@@ -1,0 +1,38 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+{% for category in site.publication_category %}
+  {% assign posts = site.publications | where: "category", category[0] | reverse %}
+  {% if posts.size > 0 %}
+    <h2>{{ category[1].title }}</h2>
+    <ul class="publication-list">
+      {% for post in posts %}
+        {% include publication-entry.html %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+
+<h2>Patents</h2>
+<ul class="publication-list">
+  <li class="publication">
+    <h3 class="publication__title">
+      <a href="https://patents.google.com/patent/US11829413B1">Temporal Localization of Mature Content in Long-Form Videos Using Only Video-Level Labels</a>
+    </h3>
+    <p class="publication__authors"><strong>{{ site.author.name }}</strong> et al.</p>
+    <p class="publication__venue">US Patent 11829413</p>
+  </li>
+  <li class="publication">
+    <h3 class="publication__title">Generating Improved Traffic Speed Data for Road Segments in a Geographical Area Using Traffic Speed Prediction Neural Networks</h3>
+    <p class="publication__authors"><strong>{{ site.author.name }}</strong> et al.</p>
+    <p class="publication__venue">Patent pending (United States)</p>
+  </li>
+</ul>
+
+{% if site.author.googlescholar %}
+<p>A full list of publications can be found on my <a href="{{ site.author.googlescholar }}">Google Scholar page</a>.</p>
+{% endif %}

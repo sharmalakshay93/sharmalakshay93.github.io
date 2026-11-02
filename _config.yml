@@ -23,7 +23,7 @@ author:
   avatar           : "profile.png"
   name             : "Lakshay Sharma"
   pronouns         :
-  bio              : "Applied Scientist / ML Engineer"
+  bio              : "AI/ML Researcher"
   location         : "New York, NY"
   employer         :
   uri              :
@@ -41,9 +41,7 @@ author:
 # Publication Category
 publication_category:
   conferences:
-    title: 'Conference / Workshop Publications'
-  manuscripts:
-    title: 'Other'
+    title: 'Selected Publications'
 
 # Site Settings
 teaser                   :

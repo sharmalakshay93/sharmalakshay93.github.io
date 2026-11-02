@@ -1,6 +1,5 @@
 main:
-  - title: "Publications"
-    url: /#publications
-
-  - title: "CV"
-    url: /cv/
+  - title: "Research"
+    url: /research/
+  - title: "Invited Talks"
+    url: /talks/

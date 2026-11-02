@@ -1,0 +1,31 @@
+# Invited talks, rendered on /talks/ (_pages/talks.html), newest first.
+#
+# Fields:
+#   title      talk / episode title
+#   link       URL the title links to
+#   venue      event, podcast, or host organization
+#   date       YYYY-MM-DD (shown as "Month YYYY")
+#   image      optional thumbnail in /images/, shown on the left
+#   image_alt  alt text for the thumbnail
+#   summary    a few sentences; Markdown allowed
+#
+# Kept here rather than in the _talks/ collection so pushes don't trigger the
+# talk-map GitHub workflow (.github/workflows/scrape_talks.yml).
+
+- title: "A Single GPU Is All You Need for Self-Supervised Pretraining"
+  link: "https://www.satellite-image-deep-learning.com/p/a-single-gpu-is-all-you-need-for"
+  venue: "Satellite Image Deep Learning Podcast"
+  date: 2026-06-17
+  image: "sidl-podcast.jpg"
+  image_alt: "Episode thumbnail: Lakshay Sharma, “A Single GPU is All You Need for Efficient Pretraining”, Satellite Image Deep Learning podcast"
+  summary: >-
+    I joined host Robin Cole to talk about self-supervised learning for remote sensing:
+    predictive, generative, and contrastive approaches, how foundation models like DINO
+    have reshaped computer vision, and why assumptions that hold for natural images often
+    break down for satellite imagery. We then dig into my WACV 2026 workshop paper on
+    subimage overlap prediction, which pretrains a model to locate a subimage within its
+    source image as a proxy task for semantic segmentation. The method matches or beats
+    established self-supervised approaches while pretraining on thousands of images rather
+    than millions. We close on data efficiency, transfer across datasets, and why targeted
+    pretraining is a practical alternative to ever-larger foundation models for niche
+    geospatial applications.

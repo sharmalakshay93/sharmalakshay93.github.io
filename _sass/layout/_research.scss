@@ -1,0 +1,87 @@
+/* ==========================================================================
+   RESEARCH PAGE: publication list
+   ========================================================================== */
+
+.publication-list {
+  list-style: none;
+  margin: 0 0 2em 0;
+  padding: 0;
+  border-top: 1px solid var(--global-border-color);
+}
+
+.publication {
+  margin: 0;
+  padding: 1.25em 0;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+/* Entries with a figure: image stacked above the text on phones,
+   image on the left of the text from small tablets up. */
+.publication__image {
+  max-width: 360px;
+  margin-bottom: 0.75em;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  img + img {
+    margin-top: 0.75em;
+  }
+}
+
+.publication--with-image {
+  @include breakpoint($small) {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25em;
+
+    .publication__image {
+      flex: 0 0 240px;
+      max-width: 240px;
+      margin-bottom: 0;
+    }
+
+    .publication__body {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
+}
+
+.publication__title {
+  margin: 0 0 0.25em 0;
+  font-size: 1.15em;
+  line-height: 1.35;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.publication__authors,
+.publication__venue {
+  color: var(--global-text-color);
+  opacity: 0.8;
+}
+
+.publication__authors {
+  margin: 0;
+}
+
+.publication__venue {
+  margin: 0 0 0.4em 0;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.publication__summary {
+  margin: 0;
+  font-size: 0.9em;
+}

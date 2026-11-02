@@ -1,0 +1,34 @@
+---
+layout: archive
+title: "Invited Talks"
+permalink: /talks/
+author_profile: true
+---
+
+{% comment %}
+  Entries live in _data/talks.yml. Styling is shared with the Research page
+  (_sass/layout/_research.scss).
+{% endcomment %}
+{% include base_path %}
+{% assign talks = site.data.talks | sort: "date" | reverse %}
+
+<ul class="publication-list">
+  {% for talk in talks %}
+    <li class="publication{% if talk.image %} publication--with-image{% endif %}">
+      {% if talk.image %}
+        <div class="publication__image">
+          <img src="{{ base_path }}/images/{{ talk.image }}" alt="{{ talk.image_alt | default: talk.title | escape }}" loading="lazy">
+        </div>
+      {% endif %}
+      <div class="publication__body">
+        <h3 class="publication__title">
+          {% if talk.link %}<a href="{{ talk.link }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+        </h3>
+        <p class="publication__venue">{{ talk.venue }}{% if talk.date %}, {{ talk.date | date: "%B %Y" }}{% endif %}</p>
+        {% if talk.summary %}
+          <p class="publication__summary">{{ talk.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
