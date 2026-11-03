@@ -12,9 +12,16 @@
         alt: 'Description'
       - file: 'figure-2.png'
         alt: 'Description'
+
+  Optional "PDF" and "Cite" buttons under the summary:
+    pdf: 'https://.../paper.pdf'
+    bibtex: |
+      @inproceedings{...}
+  "Cite" toggles a BibTeX box with a Copy button (see publication-actions.html).
 {% endcomment %}
 {% include base_path %}
 {% assign year = post.date | date: "%Y" %}
+{% assign cite_id = post.path | split: '/' | last | split: '.' | first | prepend: 'cite-' %}
 {% capture me %}<strong>{{ site.author.name }}</strong>{% endcapture %}
 <li class="publication{% if post.images or post.image %} publication--with-image{% endif %}">
   {% if post.images %}
@@ -39,5 +46,6 @@
     {% if post.excerpt %}
       <p class="publication__summary">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
     {% endif %}
+    {% include publication-actions.html pdf=post.pdf bibtex=post.bibtex id=cite_id %}
   </div>
 </li>

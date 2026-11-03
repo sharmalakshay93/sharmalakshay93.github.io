@@ -23,16 +23,29 @@ author_profile: true
     <h3 class="publication__title">
       <a href="https://patents.google.com/patent/US11829413B1">Temporal Localization of Mature Content in Long-Form Videos Using Only Video-Level Labels</a>
     </h3>
-    <p class="publication__authors"><strong>{{ site.author.name }}</strong> et al.</p>
-    <p class="publication__venue">US Patent 11829413</p>
+    <p class="publication__authors">Xiang Hao, Jingxiang Chen, Vernon Germano, Muhammad Raffay Hamid, <strong>{{ site.author.name }}</strong></p>
+    <p class="publication__venue">US Patent 11,829,413 · Amazon, 2023</p>
+    {% capture patent_bibtex %}
+@misc{hao2023temporal,
+  title={Temporal localization of mature content in long-form videos using only video-level labels},
+  author={Hao, Xiang and Chen, Jingxiang and Germano, Vernon and Hamid, Muhammad Raffay and Sharma, Lakshay},
+  year={2023},
+  publisher={Google Patents},
+  note={US Patent 11,829,413}
+}
+    {% endcapture %}
+    {% include publication-actions.html pdf="https://patentimages.storage.googleapis.com/32/db/0e/6b08d70825f2cc/US11829413.pdf" bibtex=patent_bibtex id="cite-patent-us11829413" %}
   </li>
   <li class="publication">
     <h3 class="publication__title">Generating Improved Traffic Speed Data for Road Segments in a Geographical Area Using Traffic Speed Prediction Neural Networks</h3>
-    <p class="publication__authors"><strong>{{ site.author.name }}</strong> et al.</p>
-    <p class="publication__venue">Patent pending (United States)</p>
+    <p class="publication__authors">Marius Alexandru Marin, Ming Tan, <strong>{{ site.author.name }}</strong>, Catalin Bogdan Capota, Nikola Letic, Ravi Prakash, Ivan Webber, William Henry McCloskey</p>
+    <p class="publication__venue">US Patent Application (pending) · Microsoft, filed 2025</p>
   </li>
 </ul>
 
 {% if site.author.googlescholar %}
 <p>A full list of publications can be found on my <a href="{{ site.author.googlescholar }}">Google Scholar page</a>.</p>
 {% endif %}
+
+{% include base_path %}
+<script src="{{ base_path }}/assets/js/cite.js" defer></script>

@@ -1,0 +1,22 @@
+{% comment %}
+  "PDF" and "Cite" buttons for a Research page entry. Usage:
+    {% include publication-actions.html pdf=url bibtex=text id='cite-unique-id' %}
+  Either pdf or bibtex may be left out. "Cite" toggles a BibTeX box with a
+  Copy button (assets/js/cite.js); id must be unique on the page.
+{% endcomment %}
+{% if include.pdf or include.bibtex %}
+  <div class="publication__actions">
+    {% if include.pdf %}
+      <a class="publication__btn" href="{{ include.pdf }}">PDF</a>
+    {% endif %}
+    {% if include.bibtex %}
+      <button type="button" class="publication__btn" data-cite-toggle aria-expanded="false" aria-controls="{{ include.id }}">Cite</button>
+    {% endif %}
+  </div>
+  {% if include.bibtex %}
+    <div class="publication__cite" id="{{ include.id }}" hidden>
+      <pre><code>{{ include.bibtex | strip | escape }}</code></pre>
+      <button type="button" class="publication__btn publication__copy" data-cite-copy>Copy</button>
+    </div>
+  {% endif %}
+{% endif %}

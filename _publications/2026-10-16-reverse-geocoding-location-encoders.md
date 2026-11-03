@@ -6,6 +6,17 @@ permalink: /publication/2026-10-16-reverse-geocoding-location-encoders
 date: 2026-10-16
 venue: 'arXiv'
 link: 'https://arxiv.org/abs/2610.24306'
+pdf: 'https://arxiv.org/pdf/2610.24306'
+bibtex: |
+  @misc{sharma2026learningadministrativeboundaryawarelocation,
+        title={Learning Administrative Boundary-Aware Location Encoders via Reverse Geocoding},
+        author={Lakshay Sharma and Alex Marin},
+        year={2026},
+        eprint={2610.24306},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG},
+        url={https://arxiv.org/abs/2610.24306},
+  }
 authors: 'Lakshay Sharma, Alex Marin'
 images:
   - file: 'revgeo-fig.png'
