@@ -13,6 +13,9 @@
       - file: 'figure-2.png'
         alt: 'Description'
 
+  Optional extra line under the venue (Markdown allowed), e.g. a second venue:
+    note: 'Also accepted at [Some Workshop](https://...)'
+
   Optional "PDF" and "Cite" buttons under the summary:
     pdf: 'https://.../paper.pdf'
     bibtex: |
@@ -42,7 +45,7 @@
     {% if post.authors %}
       <p class="publication__authors">{{ post.authors | replace: site.author.name, me }}</p>
     {% endif %}
-    <p class="publication__venue">{{ post.venue }}{% unless post.venue contains year %} {{ year }}{% endunless %}</p>
+    <p class="publication__venue">{{ post.venue }}{% unless post.venue contains year %} {{ year }}{% endunless %}{% if post.note %}<span class="publication__note">{{ post.note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>{% endif %}</p>
     {% if post.excerpt %}
       <p class="publication__summary">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
     {% endif %}

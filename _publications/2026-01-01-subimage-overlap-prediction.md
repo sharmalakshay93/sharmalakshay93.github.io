@@ -5,6 +5,7 @@ category: conferences
 permalink: /publication/2026-01-01-subimage-overlap-prediction
 date: 2026-01-01
 venue: 'WACV 2026 Workshop: Computer Vision For Earth Observation (CV4EO)'
+note: 'Also accepted at [NeurIPS 2026 Workshop: Advances in Representation Learning for Earth Observation (REO-2)](https://reo-workshop.org/2026/), Highlights Track'
 link: 'https://openaccess.thecvf.com/content/WACV2026W/CV4EO/html/Sharma_Subimage_Overlap_Prediction_Task-Aligned_Self-Supervised_Pretraining_For_Semantic_Segmentation_In_WACVW_2026_paper.html'
 pdf: 'https://openaccess.thecvf.com/content/WACV2026W/CV4EO/papers/Sharma_Subimage_Overlap_Prediction_Task-Aligned_Self-Supervised_Pretraining_For_Semantic_Segmentation_In_WACVW_2026_paper.pdf'
 bibtex: |
